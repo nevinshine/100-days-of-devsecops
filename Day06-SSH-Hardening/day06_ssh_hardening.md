@@ -45,25 +45,3 @@ type $env:USERPROFILE\.ssh\id_ed25519.pub | ssh nevin@192.168.234.128 "mkdir -p 
 
 ```
 
----
-
-### 📝 File 2: The README Update
-Open your main **`README.md`** file (the one that tracks your 100 days progress) and add this entry to your checklist or table.
-
-**Add this line:**
-
-```markdown
-| Day 06 | 🛡️ SSH Hardening | Disabling Passwords, Enforcing Key Auth | ✅ Completed |
-
-```
-
----
-
-###🚀 How to Push ItRun these commands in your Windows PowerShell to make it official:
-
-```powershell
-git add .
-git commit -m "Day 06: Successfully hardened SSH and disabled passwords"
-git push origin main
-
-```
