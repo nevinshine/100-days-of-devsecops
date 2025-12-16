@@ -6,6 +6,22 @@
 
 ## 📂 Progress Log
 
+| Day 06 | 🛡️ SSH Hardening | Disabling Passwords, Enforcing Key Auth | ✅ Completed |
+
+```
+
+---
+
+###🚀 How to Push ItRun these commands in your Windows PowerShell to make it official:
+
+```powershell
+git add .
+git commit -m "Day 06: Successfully hardened SSH and disabled passwords"
+git push origin main
+
+```
+
+
 ### Day 5: File Integrity Monitor (FIM)
 - **Problem:** Attackers often modify system binaries or configs (like `/etc/shadow`) to maintain persistence.
 - **Solution:** `tripwire.sh` - A script that creates SHA-256 baselines of critical files and alerts on modification.
