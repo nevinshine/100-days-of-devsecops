@@ -8,6 +8,7 @@
 
 | Day | Topic | Description | Status |
 | :--- | :--- | :--- | :--- |
+| **Day 08** | 🧠 AI Anomaly Detection | CPU-Optimized Weightless Neural Network | ✅ Completed 
 | **Day 07** | 🔫 Fail2Ban | Automated Intrusion Prevention System | ✅ Completed |
 | **Day 06** | 🛡️ SSH Hardening | Disabling Passwords, Enforcing Key Auth | ✅ Completed |
 | **Day 05** | 🔍 File Integrity Monitor | SHA-256 Hashing & Baseline Comparison | ✅ Completed |
@@ -17,6 +18,15 @@
 | **Day 01** | 👤 Identity Audit | User & Root Account Auditing | ✅ Completed |
 
 ---
+
+### Day 8: AI-Powered Intrusion Detection (Research)
+- **Project Link:** [📂 Sentinel Sandbox Source Code](https://github.com/nevinshine/sentinel-sandbox)
+- **Problem:** Kernel-level security requires low latency; standard Deep Learning is too heavy for CPU-only servers.
+- **Solution:** Engineered a custom **CPU-Optimized Weightless Neural Network (DWN)** based on WiSARD architecture.
+- **Achievement:**
+  - Replaced NVIDIA CUDA dependencies with pure PyTorch Embeddings.
+  - Trained on **UNSW-NB15** (Network Intrusion Dataset).
+  - Achieved **78.72% Accuracy** with negligible CPU overhead.
 
 ### Day 7: Fail2Ban Intrusion Prevention
 - **Problem:** Even with SSH keys, bots can flood the server with thousands of login attempts, wasting resources and cluttering logs.
