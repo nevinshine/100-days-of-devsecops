@@ -1,8 +1,5 @@
----
-title: "Day 09: Research Consolidation & System Understanding"
-description: "Consolidating kernel-level security research by documenting architecture, assumptions, and learning gaps."
-sidebar:
-  order: 10
+# Day 09: Research Consolidation & System Understanding"
+Consolidating kernel-level security research by documenting architecture, assumptions, and learning gaps.
 ---
 
 ### // Objective
