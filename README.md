@@ -1,36 +1,87 @@
-# 100 Days of DevSecOps 🛡️
+---
+title: "100 Days of DevSecOps"
+description: "Building a hardened Linux environment, security tools, and automation scripts from scratch."
+sidebar:
+  order: 1
+---
 
-**Goal:** Building a hardened Linux environment, security tools, and automation scripts from scratch.
-**Tech Stack:** Linux (Ubuntu), Bash, UFW, OpenSSH, Python.
-**Status:** 🟢 Active (Day 7/100)
+> **Goal:** Building a hardened Linux environment, security tools, and automation scripts from scratch.  
+> **Tech Stack:** Linux (Ubuntu), Bash, UFW, OpenSSH, Python.  
+> **Current Status:** <span style="color:#39FF14; font-weight:bold;">🟢 Active (Day 9/100)</span>
 
 ## 📂 Progress Log
 
 | Day | Topic | Description | Status |
 | :--- | :--- | :--- | :--- |
-| **Day 08** | 🧠 AI Anomaly Detection | CPU-Optimized Weightless Neural Network | ✅ Completed 
-| **Day 07** | 🔫 Fail2Ban | Automated Intrusion Prevention System | ✅ Completed |
-| **Day 06** | 🛡️ SSH Hardening | Disabling Passwords, Enforcing Key Auth | ✅ Completed |
-| **Day 05** | 🔍 File Integrity Monitor | SHA-256 Hashing & Baseline Comparison | ✅ Completed |
-| **Day 04** | 🧱 Firewall Automation | UFW Configuration Script | ✅ Completed |
-| **Day 03** | 🚨 Net Sentry | Port Scanning & Intrusion Detection | ✅ Completed |
-| **Day 02** | ⚙️ Process Management | Linux Lifecycle & Signal Handling | ✅ Completed |
-| **Day 01** | 👤 Identity Audit | User & Root Account Auditing | ✅ Completed |
+| **Day 09** | Research Consolidation | Sentinel Sandbox Architecture & Understanding | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
+| **Day 08** | AI Anomaly Detection | CPU-Optimized Weightless Neural Network | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
+| **Day 07** | Fail2Ban | Automated Intrusion Prevention System | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
+| **Day 06** | SSH Hardening | Disabling Passwords, Enforcing Key Auth |<span style="color:#39FF14; font-weight:bold;">Completed</span> |
+| **Day 05** | File Integrity Monitor | SHA-256 Hashing & Baseline Comparison |  <span style="color:#39FF14; font-weight:bold;">Completed</span>|
+| **Day 04** | Firewall Automation | UFW Configuration Script | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
+| **Day 03** | Net Sentry | Port Scanning & Intrusion Detection | <span style="color:#39FF14; font-weight:bold;">Completed</span>|
+| **Day 02** | Process Management | Linux Lifecycle & Signal Handling | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
+| **Day 01** | Identity Audit | User & Root Account Auditing | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
 
 ---
 
+## Detailed Operations Log
+
+### Day 9: Research Consolidation & System Understanding
+- **Focus:** Reflection, documentation, and conceptual clarity after building Sentinel Sandbox.
+- **Problem:**  
+  After several days of intensive low-level systems and ML work, technical progress was outpacing conceptual understanding. Continuing without consolidation risked shallow learning and burnout.
+- **What I Did:**
+  - Reviewed the complete **Sentinel Sandbox pipeline** from kernel tracing → data representation → ML decision
+  - Documented the system architecture, research intent, and limitations
+  - Converted implementation work into **clear written explanations** (research dossier & project docs)
+  - Refined README, architecture pages, and DevSecOps logs for accuracy and credibility
+- **Key Learnings:**
+  - Learning happens in phases: *exposure → confusion → clarity*
+  - Surface-level familiarity is a valid and necessary research stage
+  - Writing explanations reveals gaps faster than coding
+  - Honest documentation is more valuable than exaggerated results
+- **Outcome:**
+  - Sentinel Sandbox documentation now accurately reflects the real system
+  - Research work is better structured for future deep dives
+  - Mental reset achieved before moving into anomaly scoring and experiments
+- **Status:**  
+  Consolidation complete. Ready to proceed with controlled experimentation.
+
+> **Note:**  
+> Day 9 was intentionally kept lightweight to allow concepts to settle before advancing further.
+
+
 ### Day 8: AI-Powered Intrusion Detection (Research)
-- **Project Link:** [📂 Sentinel Sandbox Source Code](https://github.com/nevinshine/sentinel-sandbox)
-- **Problem:** Kernel-level security requires low latency; standard Deep Learning is too heavy for CPU-only servers.
-- **Solution:** Engineered a custom **CPU-Optimized Weightless Neural Network (DWN)** based on WiSARD architecture.
-- **Achievement:**
-  - Replaced NVIDIA CUDA dependencies with pure PyTorch Embeddings.
-  - Trained on **UNSW-NB15** (Network Intrusion Dataset).
-  - Achieved **78.72% Accuracy** with negligible CPU overhead.
+- **Project Link:** [Sentinel Sandbox Source Code](https://github.com/nevinshine/sentinel-sandbox)
+
+- **Problem:**  
+  Kernel-level security systems require **low-latency and interpretable detection**, but traditional deep learning models (LSTMs, CNNs) are heavyweight and poorly suited for CPU-only environments.
+- **Focus:**  
+  Explore **behavior-based anomaly detection** using **Weightless Neural Networks (WiSARD-style)** instead of deep neural networks.
+- **What I Built:**
+  - A **ptrace-based syscall tracer** to observe real Linux program behavior
+  - A data pipeline that converts syscall streams into:
+    - Sliding windows
+    - Bag-of-syscalls histograms
+    - Thermometer-encoded binary vectors
+  - A **Differentiable Weightless Neural Network (DWN)** trained using **Extended Finite Difference (EFD)**
+- **Key Learnings:**
+  - System calls represent ground-truth program behavior
+  - Binary encoding strongly affects model stability
+  - Weightless models can learn behavioral patterns without GPUs
+  - Differentiable training enables learning while preserving lookup-based inference
+- **Current Status:**
+  - End-to-end pipeline validated on **real kernel syscall traces**
+  - Normal-only behavioral learning demonstrated
+  - Accuracy optimization and anomaly thresholding deferred to later experiments
+
+> **Note:**  
+> This day focused on **architecture validation and learning**, not production metrics or benchmark optimization.
 
 ### Day 7: Fail2Ban Intrusion Prevention
-- **Problem:** Even with SSH keys, bots can flood the server with thousands of login attempts, wasting resources and cluttering logs.
-- **Solution:** Installed **Fail2Ban** to monitor `/var/log/auth.log` and automatically update Firewall rules to ban malicious IPs.
+- **Problem:** Even with SSH keys, bots can flood the server with thousands of login attempts, wasting resources.
+- **Solution:** Installed **Fail2Ban** to monitor `/var/log/auth.log` and automatically update Firewall rules.
 - **Configuration:**
   - **Bantime:** 1 hour (Punishment duration)
   - **Maxretry:** 3 attempts (Strike limit)
@@ -55,7 +106,7 @@
 
 ### Day 3: Network Intrusion Detection
 - **Problem:** Identifying unauthorized services listening on the network.
-- **Solution:** `net_sentry.sh` - A scanner that detects listening ports, flags Telnet usage, and checks for public exposure (`0.0.0.0`).
+- **Solution:** `net_sentry.sh` - A scanner that detects listening ports and checks for public exposure (`0.0.0.0`).
 
 ### Day 2: Process Management
 - **Topic:** Linux Process Lifecycle.
@@ -66,4 +117,5 @@
 - **Solution:** `user_audit.sh` - A script to list human users (Bash shells) and Root-privileged accounts (UID 0).
 
 ---
-*Created by Nevin Shine as part of the 100 Days Challenge.*
+<small>Created by Nevin Shine as part of the 100 Days Challenge.</small>
+
