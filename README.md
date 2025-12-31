@@ -4,12 +4,13 @@ Building a hardened Linux environment, security tools, and automation scripts fr
 
 > **Goal:** Building a hardened Linux environment, security tools, and automation scripts from scratch.  
 > **Tech Stack:** Linux (Ubuntu), Bash, UFW, OpenSSH, Python.  
-> **Current Status:** <span style="color:#39FF14; font-weight:bold;">🟢 Active (Day 12/100)</span>
+> **Current Status:** <span style="color:#39FF14; font-weight:bold;">🟢 Active (Day 15/100)</span>
 
 ## 📂 Progress Log
 
 | Day | Topic | Description | Status |
 | :--- | :--- | :--- | :--- |
+| **Day 15** | Research Logging & Experimental Discipline | Transition from implementation-focused DevSecOps to structured security research methodology | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
 | **Day 14** | Research Environment Stabilization | Native Ubuntu + Sentinel Pipeline Validation | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
 | **Day 13** | Review & Recovery | Review of previous chnages | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
 | **Day 12** | Runtime Anomaly Classification | Threshold-calibrated syscall behavior detection | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
