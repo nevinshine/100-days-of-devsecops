@@ -10,6 +10,8 @@ Building a hardened Linux environment, security tools, and automation scripts fr
 
 | Day | Topic | Description | Status |
 | :--- | :--- | :--- | :--- |
+| **Day 14** | Research Environment Stabilization | Native Ubuntu + Sentinel Pipeline Validation | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
+| **Day 13** | Review & Recovery | Review of previous chnages | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
 | **Day 12** | Runtime Anomaly Classification | Threshold-calibrated syscall behavior detection | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
 | **Day 11** | Syscall Anomaly Scoring Validation | Stabilized DWN scoring and score distribution analysis | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
 | **Day 10** | Temporal Feature Engineering | Improving Syscall Anomaly Detection via Temporal Bucketing | <span style="color:#39FF14; font-weight:bold;">Completed</span> |
